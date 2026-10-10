@@ -1,31 +1,67 @@
 cat > README.md <<'EOF'
 # FitFlow Redesign
 
-Redesign of the FitFlow fitness app with AI-powered workout plans,
-progress tracking, nutrition logging and a social community feed.
-Course: IT3060 Human Computer Interaction, SLIIT (Lab Sheet 5).
+FitFlow Redesign is a personalized fitness and wellness platform designed to provide users with AI-generated workout plans, nutrition tracking, progress tracking, and social sharing across iOS, Android and web.
 
-## Tech Stack
-- Frontend: React Native (Expo, TypeScript) and React / Next.js web
-- Backend: NestJS (TypeScript) with WebSocket gateway
-- AI service: Python FastAPI
-- Data: PostgreSQL (pgvector), Redis, Amazon S3
-- Authentication: Amazon Cognito
-- Hosting / CI: AWS ECS Fargate, GitHub Actions
+## Project Overview
 
-## Repository Structure
-- frontend/   - mobile and web clients
-- backend/    - core API and real-time gateway
-- ai-service/ - AI microservice
-- infra/      - deployment and infrastructure files
-- docs/       - tech stack summary, comparison matrix, architecture, ADRs
+The system consists of:
 
-## Documentation
-- docs/tech-stack-summary.md
-- docs/comparison-matrix.md
-- docs/architecture.png
-- docs/adr/ADR-001-technology-stack.md
+- React Native (Expo) mobile application and React / Next.js web application
+- NestJS backend API
+- FastAPI AI recommendation service
+- PostgreSQL database
+- Redis caching layer
+- Real-time communication layer (Socket.IO)
+- Authentication and authorization with Amazon Cognito
 
-## Getting Started
-Setup instructions will be added as each service is implemented.
+## Main Features
+
+- User registration and authentication
+- Quick workout logging
+- AI-generated personalized workout plans
+- Progress tracking with charts, streaks and milestones
+- Nutrition tracking with calorie and macro summary
+- Community feed with posts, likes and comments
+- Real-time updates
+
+## Technology Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React Native (Expo, TypeScript) / React (Next.js) |
+| Backend | NestJS |
+| AI Service | FastAPI / Python |
+| Database | PostgreSQL (pgvector) |
+| Cache | Redis |
+| Real-time | WebSocket / Socket.IO |
+| Authentication | Amazon Cognito (JWT) |
+| Storage | Amazon S3 |
+| Hosting | AWS ECS Fargate |
+| CI/CD | GitHub Actions |
+| API Documentation | Swagger / OpenAPI |
+| Version Control | Git / GitHub |
+
+## Project Structure
+
+```text
+fitflow-redesign/
+├── frontend/
+│   ├── mobile/
+│   └── web/
+├── backend/
+├── ai-service/
+├── infra/
+├── docs/
+│   ├── adr/
+│   ├── tech-stack-summary.md
+│   ├── comparison-matrix.md
+│   └── architecture.png
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── .gitignore
+├── LICENSE
+└── README.md
+```
 EOF
